@@ -1,3 +1,8 @@
+@font-face {
+    font-family: Seascape;
+    src: url(fonts/Seascape.otf);
+}
+
 body {
     background: black;
 }
