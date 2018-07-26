@@ -1,0 +1,84 @@
+body {
+    background: black;
+}
+
+h1,h2,h3 {
+    color: #b5a642;
+    font-family: 'Seascape';
+    text-align: center;
+}
+h1 { font-size: 65px;}
+h2 { font-size: 50px;}
+h3 { font-size: 40px;}
+
+section {
+    margin-top: 15%;
+    z-index:100;
+}
+
+.fullscreen-bg {
+    position: fixed;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+}
+    #video_overlay {
+      position: absolute;
+      background: rgba(0, 0, 0, 0.2);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index:-10;
+    }
+
+.fullscreen-bg__video {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    -webkit-transform: translate(-50%, -50%);
+       -moz-transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        transform: translate(-50%, -50%);
+}
+
+.textbox {
+    animation: text-focus-in 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+}
+
+@keyframes text-focus-in {
+    0% {
+        filter: blur(12px);
+        opacity:0;
+        }
+    100% {
+        filter: blur(0px);
+        opacity: 1;
+    }
+}
+
+@media screen and (max-width: 768px) {
+
+    h1 { font-size: 15vw;}
+    h2 { font-size: 10vw;}
+    h3 { font-size: 8vw;}
+
+    /* .fullscreen-bg {
+        background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
+    } */
+
+    /* .fullscreen-bg__video {
+        display: none;
+    } */
+
+    section {
+        margin-top: 35%;
+    }
+}
