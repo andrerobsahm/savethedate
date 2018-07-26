@@ -1,8 +1,20 @@
 @font-face {
     font-family: 'Seascape';
-    src: url(fonts/Seascape.otf),
-    format('otf');
+    src: url(../fonts/Seascape.otf);
 }
+
+/* @font-face {
+    font-family: 'SmoothStone';
+    src: url(../fonts/SmoothStone-Regular.otf) format('otf'), url(../fonts/SmoothStone-Regular.ttf) format('ttf'),
+    url(../fonts/SmoothStone-Regular.woff) format('woff');
+} */
+
+@font-face {
+    font-family: 'WildernessTypeface';
+    src: url(../fonts/WildernessTypeface-Regular.ttf);
+}
+
+
 
 body {
     background: black;
@@ -10,7 +22,8 @@ body {
 
 h1,h2,h3 {
     color: #b5a642;
-    font-family: 'Seascape', cursive;
+    font-family: 'Seascape', 'WildernessTypeface', sans-serif;
+    font-weight: lighter;
     text-align: center;
 }
 h1 { font-size: 65px;}
@@ -18,7 +31,7 @@ h2 { font-size: 50px;}
 h3 { font-size: 40px;}
 
 section {
-    margin-top: 15%;
+    margin-top: 10%;
     z-index:100;
 }
 
@@ -85,6 +98,6 @@ section {
     } */
 
     section {
-        margin-top: 35%;
+        margin-top: 20%;
     }
 }
