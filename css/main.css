@@ -75,11 +75,11 @@ h3 { font-size: 40px;}
     }
 }
 
-@media screen and (max-width: 768px) {
+@media (max-width: 768px) {
 
-    h1 { font-size: 40px;}
-    h2 { font-size: 30px;}
-    h3 { font-size: 25px;}
+    h1 { font-size: 3.5rem;}
+    h2 { font-size: 2.5rem;}
+    h3 { font-size: 2rem;}
 
     /* .fullscreen-bg {
         background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
