@@ -3,18 +3,10 @@
     src: url(../fonts/Seascape.otf);
 }
 
-/* @font-face {
-    font-family: 'SmoothStone';
-    src: url(../fonts/SmoothStone-Regular.otf) format('otf'), url(../fonts/SmoothStone-Regular.ttf) format('ttf'),
-    url(../fonts/SmoothStone-Regular.woff) format('woff');
-} */
-
 @font-face {
     font-family: 'WildernessTypeface';
     src: url(../fonts/WildernessTypeface-Regular.ttf);
 }
-
-
 
 body {
     background: black;
@@ -30,7 +22,7 @@ h1 { font-size: 65px;}
 h2 { font-size: 50px;}
 h3 { font-size: 40px;}
 
-section {
+.textbox {
     margin-top: 10%;
     z-index:100;
 }
@@ -46,7 +38,7 @@ section {
 }
     #video_overlay {
       position: absolute;
-      background: rgba(0, 0, 0, 0.2);
+      background: rgba(0, 0, 0, 0.5);
       top: 0;
       right: 0;
       bottom: 0;
@@ -85,9 +77,9 @@ section {
 
 @media screen and (max-width: 768px) {
 
-    h1 { font-size: 15vw;}
-    h2 { font-size: 10vw;}
-    h3 { font-size: 8vw;}
+    h1 { font-size: 40px;}
+    h2 { font-size: 30px;}
+    h3 { font-size: 25px;}
 
     /* .fullscreen-bg {
         background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
@@ -97,7 +89,7 @@ section {
         display: none;
     } */
 
-    section {
-        margin-top: 20%;
+    .textbox {
+        margin-top: 45%;
     }
 }
