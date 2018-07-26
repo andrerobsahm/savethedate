@@ -1,6 +1,7 @@
 @font-face {
-    font-family: Seascape;
-    src: url(fonts/Seascape.otf);
+    font-family: 'Seascape';
+    src: url(fonts/Seascape.otf),
+    format('otf');
 }
 
 body {
@@ -9,7 +10,7 @@ body {
 
 h1,h2,h3 {
     color: #b5a642;
-    font-family: 'Seascape';
+    font-family: 'Seascape', cursive;
     text-align: center;
 }
 h1 { font-size: 65px;}
