@@ -92,3 +92,12 @@ p { font-size:25px;}
         background-size: auto 160%;
     }
 }
+@media screen and (orientation:landscape) {
+
+    .fullscreen-bg {
+        background-size: 100vw auto;
+    }
+    .textbox {
+        margin-top: 0%;
+    }
+}
