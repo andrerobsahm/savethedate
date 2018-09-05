@@ -5,7 +5,6 @@ body {
     background-color: #666666;
 }
 
-/* TEXT */
 @font-face {
     font-family: 'Seascape';
     src: url(../fonts/Seascape.otf);
@@ -39,8 +38,6 @@ p { font-size:25px;}
     }
 }
 
-
-/* BACKGROUND */
 .fullscreen-bg {
     position: absolute;
     top: 0;
@@ -59,15 +56,14 @@ p { font-size:25px;}
 }
 
 .overlay {
-      position: fixed;
-      background: rgba(0, 0, 0, 0.6);
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index:-10;
-    }
-
+    position: fixed;
+    background: rgba(0, 0, 0, 0.6);
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:-10;
+}
 
 
 @-webkit-keyframes movement {
@@ -86,22 +82,13 @@ p { font-size:25px;}
     100%{background-position:0% 30%}
 }
 
-/* MEDIA QUERIES */
 @media (max-width: 768px) {
 
     h1 { font-size: 3.5rem;}
     h2 { font-size: 2.5rem;}
     h3 { font-size: 2rem;}
 
-    /* .overlay {
-        background: rgba(0, 0, 0, 0.7);
-    } */
-
-    /* .fullscreen-bg {
-        background: url(../media/forest.jpg) center center / cover no-repeat;
-    } */
-
-    /* .textbox {
-        margin-top: 45%;
-    } */
+    .fullscreen-bg {
+        background-size: auto 160%;
+    }
 }
