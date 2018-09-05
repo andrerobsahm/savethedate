@@ -1,67 +1,31 @@
+body {
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    background-color: #666666;
+}
+
+/* TEXT */
 @font-face {
     font-family: 'Seascape';
     src: url(../fonts/Seascape.otf);
 }
 
-@font-face {
-    font-family: 'WildernessTypeface';
-    src: url(../fonts/WildernessTypeface-Regular.ttf);
-}
-
-body {
-    background: black;
-}
-
-h1,h2,h3 {
+h1,h2,h3,p {
     color: #b5a642;
-    font-family: 'Seascape', 'WildernessTypeface', sans-serif;
+    font-family: 'Seascape', sans-serif;
     font-weight: lighter;
     text-align: center;
 }
 h1 { font-size: 65px;}
 h2 { font-size: 50px;}
 h3 { font-size: 40px;}
+p { font-size:25px;}
+
 
 .textbox {
-    margin-top: 10%;
-    z-index:100;
-}
-
-.fullscreen-bg {
-    position: fixed;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    overflow: hidden;
-    z-index: -100;
-}
-    #video_overlay {
-      position: absolute;
-      background: rgba(0, 0, 0, 0.5);
-      top: 0;
-      right: 0;
-      bottom: 0;
-      left: 0;
-      z-index:-10;
-    }
-
-.fullscreen-bg__video {
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: auto;
-    height: auto;
-    min-width: 100%;
-    min-height: 100%;
-    -webkit-transform: translate(-50%, -50%);
-       -moz-transform: translate(-50%, -50%);
-        -ms-transform: translate(-50%, -50%);
-        transform: translate(-50%, -50%);
-}
-
-.textbox {
-    animation: text-focus-in 2.5s cubic-bezier(0.550, 0.085, 0.680, 0.530) both;
+    margin-top: 8%;
+    animation: text-focus-in 2.5s ease-out both;
 }
 
 @keyframes text-focus-in {
@@ -75,21 +39,69 @@ h3 { font-size: 40px;}
     }
 }
 
+
+/* BACKGROUND */
+.fullscreen-bg {
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    overflow: hidden;
+    z-index: -100;
+
+    background: url(../media/forest.jpg) center / cover no-repeat;
+    background-size: 100vw auto;
+
+    animation: movement 100s linear infinite;
+    -moz-animation: movement 100s linear infinite;
+    -webkit-animation: movement 100s linear infinite;
+}
+
+.overlay {
+      position: fixed;
+      background: rgba(0, 0, 0, 0.6);
+      top: 0;
+      right: 0;
+      bottom: 0;
+      left: 0;
+      z-index:-10;
+    }
+
+
+
+@-webkit-keyframes movement {
+    0%{background-position:0% 30%}
+    50%{background-position:0% 100%}
+    100%{background-position:0% 30%}
+}
+@-moz-keyframes movement {
+    0%{background-position:0% 30%}
+    50%{background-position:0% 100%}
+    100%{background-position:0% 30%}
+}
+@keyframes movement {
+    0%{background-position:0% 30%}
+    50%{background-position:0% 100%}
+    100%{background-position:0% 30%}
+}
+
+/* MEDIA QUERIES */
 @media (max-width: 768px) {
 
     h1 { font-size: 3.5rem;}
     h2 { font-size: 2.5rem;}
     h3 { font-size: 2rem;}
 
+    /* .overlay {
+        background: rgba(0, 0, 0, 0.7);
+    } */
+
     /* .fullscreen-bg {
-        background: url('http://dev2.slicejack.com/fullscreen-video-demo/img/videoframe.jpg') center center / cover no-repeat;
+        background: url(../media/forest.jpg) center center / cover no-repeat;
     } */
 
-    /* .fullscreen-bg__video {
-        display: none;
-    } */
-
-    .textbox {
+    /* .textbox {
         margin-top: 45%;
-    }
+    } */
 }
